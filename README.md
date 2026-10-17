@@ -1,0 +1,8 @@
+# error-pages
+
+Static error pages for the vmd1 Traefik edge. Served as an EdgeSite (see the `homelab` repo) and used by Traefik's `errors` middleware.
+
+- `build.py` generates `public/` (`python3 build.py`); the generated files are committed because the EdgeSite serves `public/` as-is (no build step).
+- `public/<status>.html`: 400, 401, 403, 404, 408, 413, 429, 500, 502, 503, 504.
+- `public/direct-ip.html`: shown (with HTTP status 404) for requests that reach an edge node by bare IP or an unknown host.
+- Pages are fully self-contained (inline CSS, no JavaScript, no external requests), support light/dark, and are `noindex`.

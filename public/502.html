@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>502 Bad gateway</title>
+<style>
+:root{--bg:#f6f6f4;--fg:#1b1b1a;--muted:#62625e;--accent:#b4442a;--line:#dcdcd6}
+@media (prefers-color-scheme:dark){:root{--bg:#141413;--fg:#ececea;--muted:#9a9a94;--accent:#e8825f;--line:#2e2e2b}}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;align-items:center;justify-content:center;padding:0 16px}
+main{max-width:34rem;width:100%}
+.code{font:700 clamp(4rem,18vw,7.5rem)/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent);letter-spacing:-.04em;margin:0}
+h1{font-size:1.5rem;margin:.5rem 0 .25rem}
+p{margin:.25rem 0;color:var(--muted)}
+p.lead{color:var(--fg);font-size:1.1rem}
+.actions{margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap}
+a.btn{display:inline-block;padding:.5rem 1rem;border:1px solid var(--line);border-radius:6px;color:var(--fg);text-decoration:none;font-size:.95rem}
+a.btn:hover,a.btn:focus-visible{border-color:var(--accent);color:var(--accent)}
+footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+<p class="code" aria-hidden="true">502</p>
+<h1>Bad gateway</h1>
+<p class="lead">The service did not answer properly.</p>
+<p>The edge could not get a valid response from the service behind it. It may be restarting.</p>
+<div class="actions"><a class="btn" href="">Try again</a></div>
+<footer>vmd1 edge &middot; 502 Bad gateway</footer>
+</main>
+</body>
+</html>
