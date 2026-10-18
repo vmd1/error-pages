@@ -20,7 +20,13 @@ p.lead{color:var(--fg);font-size:1.1rem}
 .actions{margin-top:1.5rem;display:flex;gap:.75rem;flex-wrap:wrap}
 a.btn{display:inline-block;padding:.5rem 1rem;border:1px solid var(--line);border-radius:6px;color:var(--fg);text-decoration:none;font-size:.95rem}
 a.btn:hover,a.btn:focus-visible{border-color:var(--accent);color:var(--accent)}
-footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted)}
+footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem 1rem}
+details.ip summary{cursor:pointer;list-style:none;color:var(--muted)}
+details.ip summary::-webkit-details-marker{display:none}
+details.ip summary:hover,details.ip summary:focus-visible{color:var(--accent)}
+details.ip .shown{display:none;color:var(--fg);font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+details.ip[open] .hidden{display:none}
+details.ip[open] .shown{display:inline}
 /* below: used by the connection trace page only (kept here so the stylesheet is identical everywhere) */
 h2{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:1.5rem 0 .25rem}
 dl.kv{margin:0;border-top:1px solid var(--line)}
@@ -46,7 +52,7 @@ dl.kv dd{margin:0;min-width:0;overflow-wrap:anywhere;font:.9rem/1.5 ui-monospace
 <p class="lead">This server is not reachable by IP address.</p>
 <p>You reached an edge node without a valid hostname. Use the site&#x27;s domain name instead.</p>
 
-<footer>vmd1 edge &middot; Direct IP access forbidden</footer>
+<footer><span>vmd1 edge &middot; Direct IP access forbidden</span><details class="ip"><summary><span class="hidden">Click to view IP</span><span class="shown"><!--# echo var="client_ip" encoding="none" --></span></summary></details></footer>
 </main>
 </body>
 </html>
