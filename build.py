@@ -33,10 +33,11 @@ TEMPLATE = """<!doctype html>
 :root{{--bg:#f6f6f4;--fg:#1b1b1a;--muted:#62625e;--accent:#b4442a;--line:#dcdcd6}}
 @media (prefers-color-scheme:dark){{:root{{--bg:#141413;--fg:#ececea;--muted:#9a9a94;--accent:#e8825f;--line:#2e2e2b}}}}
 *{{box-sizing:border-box}}
-html,body{{height:100%;margin:0}}
-body{{background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;align-items:center;justify-content:center;padding:0 16px}}
+html,body{{margin:0}}
+body{{background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;align-items:center;justify-content:center;min-height:100vh;padding:24px 16px}}
 main{{max-width:34rem;width:100%}}
 .code{{font:700 clamp(4rem,18vw,7.5rem)/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--accent);letter-spacing:-.04em;margin:0}}
+.code.sm{{font-size:clamp(1.6rem,8vw,2.4rem);letter-spacing:-.02em}}
 h1{{font-size:1.5rem;margin:.5rem 0 .25rem}}
 p{{margin:.25rem 0;color:var(--muted)}}
 p.lead{{color:var(--fg);font-size:1.1rem}}
@@ -44,6 +45,12 @@ p.lead{{color:var(--fg);font-size:1.1rem}}
 a.btn{{display:inline-block;padding:.5rem 1rem;border:1px solid var(--line);border-radius:6px;color:var(--fg);text-decoration:none;font-size:.95rem}}
 a.btn:hover,a.btn:focus-visible{{border-color:var(--accent);color:var(--accent)}}
 footer{{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--line);font-size:.8rem;color:var(--muted)}}
+/* below: used by the connection trace page only (kept here so the stylesheet is identical everywhere) */
+h2{{font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:1.5rem 0 .25rem}}
+dl.kv{{margin:0;border-top:1px solid var(--line)}}
+dl.kv div{{display:flex;gap:1rem;padding:.45rem 0;border-bottom:1px solid var(--line)}}
+dl.kv dt{{flex:0 0 7.5rem;color:var(--muted)}}
+dl.kv dd{{margin:0;min-width:0;overflow-wrap:anywhere;font:.9rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}}
 </style>
 </head>
 <body>

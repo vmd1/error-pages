@@ -6,3 +6,7 @@ Static error pages for the vmd1 Traefik edge. Served as an EdgeSite (see the `ho
 - `public/<status>.html`: 400, 401, 403, 404, 408, 413, 429, 500, 502, 503, 504.
 - `public/direct-ip.html`: shown (with HTTP status 404) for requests that reach an edge node by bare IP or an unknown host.
 - Pages are fully self-contained (inline CSS, no JavaScript, no external requests), support light/dark, and are `noindex`.
+
+## Shared look
+
+The stylesheet in `build.py` is the single design for all vmd1 infrastructure pages. The Traefik connection trace page (`/.vmd1/trace`, plugin source in the homelab repo, `crds-and-operators/traefik/manifest.yaml`) embeds a copy of the same CSS, so change both together.
