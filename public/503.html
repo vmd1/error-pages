@@ -27,6 +27,16 @@ dl.kv{margin:0;border-top:1px solid var(--line)}
 dl.kv div{display:flex;gap:1rem;padding:.45rem 0;border-bottom:1px solid var(--line)}
 dl.kv dt{flex:0 0 7.5rem;color:var(--muted)}
 dl.kv dd{margin:0;min-width:0;overflow-wrap:anywhere;font:.9rem/1.5 ui-monospace,SFMono-Regular,Menlo,monospace}
+.map{width:100%;height:auto;display:block;margin:.75rem 0 .25rem}
+.map .land{fill:none;stroke:var(--muted);stroke-opacity:.5;stroke-width:.72;stroke-linecap:round;stroke-dasharray:0 1}
+.map .arc{fill:none;stroke:var(--accent);stroke-width:.45;stroke-linecap:round;stroke-dasharray:1.2 1.2;animation:flow 1.4s linear infinite}
+@keyframes flow{to{stroke-dashoffset:-2.4}}
+@media (prefers-reduced-motion:reduce){.map .arc{animation:none}}
+.map .you{fill:var(--bg);stroke:var(--fg);stroke-width:.5}
+.map .edge{fill:var(--accent)}
+.map .ring{fill:none;stroke:var(--accent);stroke-width:.3;stroke-opacity:.55}
+.map text{font:2.5px ui-monospace,SFMono-Regular,Menlo,monospace;fill:var(--fg)}
+.map text.dim{fill:var(--muted)}
 </style>
 </head>
 <body>
